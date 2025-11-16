@@ -119,15 +119,15 @@ export default function HeroSection() {
 					<div className="mt-6 md:mt-8 flex flex-col items-center justify-center space-y-4">
 						<ShinyButton 
 							onClick={() => (window.location.href = 'tel:+917428718464')}
-							className="bg-secondary text-primary font-neue-montreal font-bold rounded-full px-10 md:px-12 py-4 border-0 shadow-lg"
+							className="bg-secondary text-primary font-neue-montreal font-bold rounded-full px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl border-0 shadow-lg"
 							shineColor="#ffffff"
 							overlayShineColor="#ffffff"
 						>
-							Call Us Now
+							Contact Us
 						</ShinyButton>
-						<button className="group inline-flex items-center space-x-2 text-white hover:opacity-80" onClick={() => navigate('/our-work')}>
+						<button className="group inline-flex items-center space-x-2 text-white hover:opacity-80 text-lg md:text-xl" onClick={() => navigate('/our-work')}>
 							<span className="font-neue-montreal">View Our Work</span>
-							<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+							<ArrowRight className="h-5 w-5 md:h-6 md:w-6 transition-transform group-hover:translate-x-0.5" />
 						</button>
 					</div>
 				</div>
