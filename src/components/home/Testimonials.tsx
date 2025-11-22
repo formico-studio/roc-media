@@ -90,7 +90,7 @@ export default function TestimonialsSection() {
 			company: "Israel",
 			avatar: "#",
 			testimonial:
-				"Rohit wend above and beyond in delivering us a great UGC video, helping us addressing the Indian market. top work !!",
+				"ROC Media went above and beyond in delivering us a great videos, helping us addressing the Indian market. top work !!",
 			rating: 5,
 		},
 		{
@@ -98,7 +98,7 @@ export default function TestimonialsSection() {
 			company: "Morocco",
 			avatar: "#",
 			testimonial:
-				"Rohit truly IMPRESSED me with their spokesperson video, going above and beyond with a visually stunning presentation and meticulous attention to detail. Their proactive communication and fluency made working with them a BREEZE, and they delivered the project promptly. Highly recommended! 👏",
+				"ROC Media truly IMPRESSED me with their videos, going above and beyond with a visually stunning presentation and meticulous attention to detail. Their proactive communication and fluency made working with them a BREEZE, and they delivered the project promptly. Highly recommended! 👏",
 			rating: 5,
 		},
 		{
@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
 			company: "India",
 			avatar: "#",
 			testimonial:
-				"Rohit was very cooperative and went out of way to help in creating the UGC video and his behaviour was professional and overall experiance was fabulous.",
+				"ROC Media was very cooperative and went out of way to help in creating the videos and his behaviour was professional and overall experiance was fabulous.",
 			rating: 5,
 		},
 		{
@@ -114,7 +114,7 @@ export default function TestimonialsSection() {
 			company: "Parlo London",
 			avatar: "#",
 			testimonial:
-				"This was our second successful project with Rohitoncreation. He is an absolute pleasure to work with, always exceeding expectations. His video editing skills are top-notch.",
+				"This was our second successful project with ROC Media. He is an absolute pleasure to work with, always exceeding expectations. His video editing skills are top-notch.",
 			rating: 5,
 		},
 		{
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
 			company: "India",
 			avatar: "#",
 			testimonial:
-				"Absolutely Outstanding Experience! I couldn\’t be happier with the service I received! The seller was professional, responsive, and truly went above and beyond my expectations. The quality of the work was top-notch — delivered on time, exactly as described, and with great attention to detail. Communication was smooth throughout the entire process, and any revisions I requested were handled quickly and professionally. If you're looking for someone reliable and skilled, look no further. I highly recommend this gig to anyone who values quality and wants a stress-free experience. I\’ll definitely be coming back for more!",
+				"Absolutely Outstanding Experience! I couldn\’t be happier with the service I received! ROC Media was professional, responsive, and truly went above and beyond my expectations. The quality of the work was top-notch — delivered on time, exactly as described, and with great attention to detail. Communication was smooth throughout the entire process, and any revisions I requested were handled quickly and professionally. If you're looking for someone reliable and skilled, look no further. I highly recommend this gig to anyone who values quality and wants a stress-free experience. I\’ll definitely be coming back for more!",
 			rating: 5,
 		},
 		{
@@ -130,7 +130,7 @@ export default function TestimonialsSection() {
 			company: "United States",
 			avatar: "#",
 			testimonial:
-				"Rohitoncreation did an OUTSTANDING job—professional, detail-oriented, and went above and beyond! His quick responsiveness and collaborative attitude made the process seamless and enjoyable. Highly recommend working with him!",
+				"ROC Media did an OUTSTANDING job—professional, detail-oriented, and went above and beyond! Their quick responsiveness and collaborative attitude made the process seamless and enjoyable. Highly recommend working with them!",
 			rating: 5,
 		},
 		{
@@ -138,7 +138,7 @@ export default function TestimonialsSection() {
 			company: "India",
 			avatar: "#",
 			testimonial:
-				"hey, I tried Rohit's UGC videos. we got 4 videos from him and the videos are firstly exceptional with hook and good quality. and secondly these are getting us very good results. keep up the good work! will place new order soon!",
+				"hey, I tried ROC Media's videos. we got 4 videos from him and the videos are firstly exceptional with hook and good quality. and secondly these are getting us very good results. keep up the good work! will place new order soon!",
 			rating: 5,
 		},
 		{

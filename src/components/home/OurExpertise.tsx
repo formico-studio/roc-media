@@ -1,95 +1,132 @@
 import {
-	VideoPlayer,
-	VideoPlayerContent,
-	VideoPlayerPlayButton,
-	VideoPlayerTimeRange,
-	VideoPlayerMuteButton,
-	VideoPlayerClickOverlay,
-} from '@/components/ui/kibo-ui/video-player'
-import preProdImg from '@/assets/images/pre-prod-img.webp'
+	Clapperboard,
+	Target,
+	Scissors,
+	MonitorPlay,
+	Share2
+} from 'lucide-react'
+
+const expertiseItems = [
+	{
+		title: "Content Creation",
+		icon: Clapperboard,
+		items: ["Story-Driven Scripting", "Professional Recording", "Seamless Post-Production"],
+		className: "lg:col-span-1"
+	},
+	{
+		title: "Content Strategy",
+		icon: Target,
+		items: ["Market-Informed Planning", "Thematic Blueprint & Budgeting", "Actionable Growth Roadmap"],
+		className: "lg:col-span-1"
+	},
+	{
+		title: "Video Editing",
+		icon: Scissors,
+		items: ["Professional Editing", "Masterful Pacing & Flow", "Color Grading & Sound Design"],
+		className: "lg:col-span-1"
+	},
+	{
+		title: "Motion Graphics",
+		icon: MonitorPlay,
+		items: ["Visually Engaging 2D Animation", "Clear SaaS & Explainer Videos", "Impactful Kinetic Typography"],
+		className: "lg:col-span-1 lg:col-start-1 lg:translate-x-1/2"
+	},
+	{
+		title: "Social Media Management",
+		icon: Share2,
+		items: ["Platform-Specific Content Research", "Strategic Content Calendar", "High-Volume Content Production"],
+		className: "lg:col-span-1 lg:col-start-2 lg:translate-x-1/2"
+	}
+]
 
 export default function OurExpertise() {
 	return (
-		<section className="bg-primary py-16 lg:py-20">
-			<div className="container mx-auto px-4">
+		<section className="bg-primary py-24 lg:py-32 relative overflow-hidden">
+			{/* Background Elements */}
+			<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+				<div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[100px]" />
+				<div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[100px]" />
+			</div>
+
+			<div className="container mx-auto px-4 relative z-10">
 				{/* Section Title */}
 				<h2 className="text-3xl lg:text-4xl font-neue-montreal-bold text-white text-center mb-16 lg:mb-20 tracking-wide">
 					Our Expertise
 				</h2>
 
-				{/* Expertise Blocks */}
-				<div className="space-y-16 lg:space-y-20">
-					{/* First Block - Pre Production */}
-					<div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-						{/* Left Side - Image */}
-						<div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-							<div className="border-4 border-secondary w-full max-w-md aspect-video overflow-hidden">
-								<img
-									src={preProdImg}
-									alt="Pre Production - Scripting, Storyboard and Recording"
-									className="w-full h-full object-cover"
-								/>
+				{/* Bento Grid */}
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+					{/* Top Row: 3 Cards */}
+					{expertiseItems.slice(0, 3).map((item, index) => (
+						<div
+							key={index}
+							className={`
+								group relative p-8 rounded-3xl 
+								bg-gradient-to-b from-white/10 to-white/5 
+								border border-white/30 hover:border-secondary/30 
+								backdrop-blur-md transition-all duration-500 ease-out
+								hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10
+								${item.className}
+							`}
+						>
+							<div className="h-full flex flex-col">
+								<div className="mb-8">
+									<div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+										<item.icon className="w-8 h-8 text-secondary" />
+									</div>
+								</div>
+
+								<h3 className="text-2xl font-neue-montreal-bold text-white mb-6 group-hover:text-secondary transition-colors duration-300">
+									{item.title}
+								</h3>
+
+								<ul className="space-y-3 mt-auto">
+									{item.items.map((subItem, idx) => (
+										<li key={idx} className="flex items-start gap-3 text-gray-300 font-neue-montreal-regular text-lg group-hover:text-white transition-colors duration-300">
+											<span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
+											<span className="leading-relaxed">{subItem}</span>
+										</li>
+									))}
+								</ul>
 							</div>
 						</div>
+					))}
 
-						{/* Right Side - Text */}
-						<div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-center">
-							<h3 className="text-3xl lg:text-4xl font-neue-montreal-bold">
-								<span className="text-secondary">Pre</span>
-								<span className="text-white"> Production</span>
-							</h3>
-							<p className="text-white text-lg lg:text-xl opacity-90 font-neue-montreal-regular">
-								( Scripting, Storyboard and Recording )
-							</p>
-						</div>
-					</div>
+					{/* Bottom Row: 2 Cards Centered */}
+					<div className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-8">
+						{expertiseItems.slice(3, 5).map((item, index) => (
+							<div
+								key={index + 3}
+								className={`
+									group relative p-8 rounded-3xl 
+									bg-gradient-to-b from-white/10 to-white/5 
+									border border-white/30 hover:border-secondary/30 
+									backdrop-blur-md transition-all duration-500 ease-out
+									hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10
+								`}
+							>
+								<div className="h-full flex flex-col">
+									<div className="mb-8">
+										<div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+											<item.icon className="w-8 h-8 text-secondary" />
+										</div>
+									</div>
 
-					{/* Second Block - Post Production */}
-					<div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-						{/* Left Side - Text */}
-						<div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-center order-2 lg:order-1">
-							<h3 className="text-3xl lg:text-4xl font-neue-montreal-bold">
-								<span className="text-secondary">Post</span>
-								<span className="text-white"> Production</span>
-							</h3>
-							<p className="text-white font-neue-montreal text-lg lg:text-xl opacity-90 font-neue-montreal-regular">
-								( Editing and Motion graphics )
-							</p>
-						</div>
+									<h3 className="text-2xl font-neue-montreal-bold text-white mb-6 group-hover:text-secondary transition-colors duration-300">
+										{item.title}
+									</h3>
 
-						{/* Right Side - Video */}
-						<div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
-							<div className="border-4 border-secondary w-full max-w-md aspect-video overflow-hidden relative">
-								<VideoPlayer className="w-full h-full relative">
-									<VideoPlayerContent
-										id="post-production-video"
-										poster="/post-prod.webp"
-										className="w-full h-full object-cover"
-										preload="auto"
-										playsInline
-										crossOrigin=""
-										slot="media"
-										src="/post-production.mp4"
-									/>
-									
-									{/* Clickable overlay for mobile play/pause */}
-									<VideoPlayerClickOverlay />
-									
-									{/* Centered Play Button (CSS-hidden while playing) */}
-									<VideoPlayerPlayButton
-										title=""
-										className="centered-play-btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-16 h-16 rounded-full bg-black/70 hover:bg-black/80 text-white flex items-center justify-center shadow-lg ring-2 ring-white/70 pointer-events-auto transition"
-										style={{ ['--media-button-icon-width']: '32px', ['--media-button-icon-height']: '32px', ['--media-control-display']: 'block', ['--media-icon-color']: '#ffffff' } as any}
-									/>
-									
-									{/* Built-in Mute Button (top-right circle) */}
-									<VideoPlayerMuteButton />
-									
-									{/* Timeline at bottom border */}
-									<VideoPlayerTimeRange />
-								</VideoPlayer>
+									<ul className="space-y-3 mt-auto">
+										{item.items.map((subItem, idx) => (
+											<li key={idx} className="flex items-start gap-3 text-gray-300 font-neue-montreal-regular text-lg group-hover:text-white transition-colors duration-300">
+												<span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity" />
+												<span className="leading-relaxed">{subItem}</span>
+											</li>
+										))}
+									</ul>
+								</div>
 							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</div>

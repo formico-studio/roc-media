@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 import discuss1 from '@/assets/images/discuss1.webp'
-import discuss2 from '@/assets/images/discuss2.webp'
 import shoot1 from '@/assets/images/shoot1.webp'
 import shoot2 from '@/assets/images/shoot2.webp'
 import shoot3 from '@/assets/images/shoot3.webp'
@@ -15,7 +14,6 @@ const team: Member[] = [
   { photo: shoot1 },
   { photo: shoot2 },
   { photo: shoot3 },
-  { photo: discuss2 },
 ]
 
   function TeamCard({ member }: { member: Member }) {
@@ -56,22 +54,10 @@ export default function OurTeams() {
 
       {/* Team grid */}
       <section className="max-w-7xl mx-auto px-4 pb-20">
-        <div className="flex flex-col gap-6 md:gap-8">
-          {/* First row - 3 cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {team.slice(0, 3).map((m) => (
-              <TeamCard key={m.photo} member={m} />
-            ))}
-          </div>
-          
-          {/* Second row - 2 centered cards */}
-          <div className="flex justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full sm:[width:calc(66.666667%-1rem)]">
-              {team.slice(3, 5).map((m) => (
-                <TeamCard key={m.photo} member={m} />
-              ))}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+          {team.map((m) => (
+            <TeamCard key={m.photo} member={m} />
+          ))}
         </div>
 
         {/* Bottom CTA */}

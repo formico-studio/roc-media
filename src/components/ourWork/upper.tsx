@@ -4,12 +4,12 @@ interface UpperProps {
 	onCategoryChange?: (category: string) => void
 }
 
-const categories = ['CarInfo', 'Kroslo', 'FindMyKid'] as const
+const categories = ['CarInfo', 'Kroslo', 'FindMyKid', 'Motion Graphics'] as const
 
-export default function Upper ({ onCategoryChange }: UpperProps) {
+export default function Upper({ onCategoryChange }: UpperProps) {
 	const [activeCategory, setActiveCategory] = useState<string>('CarInfo')
 
-	function handleCategoryClick (category: string) {
+	function handleCategoryClick(category: string) {
 		setActiveCategory(category)
 		if (onCategoryChange) onCategoryChange(category)
 	}
@@ -28,7 +28,7 @@ export default function Upper ({ onCategoryChange }: UpperProps) {
 						<span>Back to Home</span>
 					</a>
 
-					
+
 				</div>
 
 				{/* Spacing below logo/back row */}

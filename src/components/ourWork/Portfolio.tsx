@@ -42,6 +42,18 @@ const categories = {
 			{ title: 'Safety Tips', url: '@reels/findmykid/5.mp4', thumbnail: '@reels/findmykid/5.webp' },
 		],
 	},
+	'motion graphics': {
+		title: 'Motion Graphics Videos',
+		orientation: 'landscape',
+		videos: [
+			{ title: 'Motion Graphic 1', url: '@reels/motion/vid1.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 2', url: '@reels/motion/vid2.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 3', url: '@reels/motion/vid3.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 4', url: '@reels/motion/vid4.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 5', url: '@reels/motion/vid5.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 6', url: '@reels/motion/vid6.mp4', thumbnail: undefined },
+		],
+	},
 } as const
 
 export type PortfolioCategory = keyof typeof categories
@@ -56,7 +68,7 @@ const reelModules = import.meta.glob('/src/assets/reels/**/*.{mp4,webm,ogg,webp,
 	import: 'default',
 }) as Record<string, string>
 
-function resolveReelUrl (maybeAliasUrl: string): string {
+function resolveReelUrl(maybeAliasUrl: string): string {
 	if (!maybeAliasUrl.startsWith('@reels/')) return maybeAliasUrl
 	const key = maybeAliasUrl.replace(
 		'@reels/',
@@ -71,7 +83,7 @@ interface PortfolioVideoPlayerProps {
 	className?: string
 	orientation?: 'landscape' | 'portrait'
 	isCenter?: boolean
-    posterUrl?: string
+	posterUrl?: string
 }
 
 function PortfolioVideoPlayer({ videoUrl, className, orientation = 'landscape', isCenter = false, posterUrl }: PortfolioVideoPlayerProps) {
@@ -158,7 +170,7 @@ function PortfolioVideoPlayer({ videoUrl, className, orientation = 'landscape', 
 						onPause={handleVideoPause}
 					/>
 					<VideoPlayerClickOverlay />
-					<div 
+					<div
 						onClick={handlePlayPause}
 						className="absolute inset-0 z-5 cursor-pointer"
 						style={{ WebkitTapHighlightColor: 'transparent' }}
@@ -166,28 +178,28 @@ function PortfolioVideoPlayer({ videoUrl, className, orientation = 'landscape', 
 					<VideoPlayerMuteButton />
 					{/*<VideoPlayerTimeRange />*/}
 					{!isPlaying && (
-						<div 
+						<div
 							onClick={handlePlayPause}
 							className={`
 								absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 
 								cursor-pointer transition-all duration-200 ease-out
-								${orientation === 'landscape' 
-									? isCenter 
-										? 'w-16 h-16 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105' 
+								${orientation === 'landscape'
+									? isCenter
+										? 'w-16 h-16 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105'
 										: 'w-12 h-12 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105'
-									: isCenter 
-										? 'w-20 h-20 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105' 
+									: isCenter
+										? 'w-20 h-20 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105'
 										: 'w-16 h-16 bg-black bg-opacity-50 rounded-full hover:bg-opacity-70 hover:scale-105'
 								}
 								flex items-center justify-center backdrop-blur-sm
 							`}
 						>
 							<svg
-								width={orientation === 'landscape' 
+								width={orientation === 'landscape'
 									? isCenter ? '22' : '18'
 									: isCenter ? '28' : '22'
 								}
-								height={orientation === 'landscape' 
+								height={orientation === 'landscape'
 									? isCenter ? '22' : '18'
 									: isCenter ? '28' : '22'
 								}
@@ -214,7 +226,7 @@ function PortfolioVideoPlayer({ videoUrl, className, orientation = 'landscape', 
 	)
 }
 
-export default function Portfolio ({ activeCategory }: PortfolioProps) {
+export default function Portfolio({ activeCategory }: PortfolioProps) {
 	const [isVisible, setIsVisible] = useState(true)
 
 	useEffect(() => {
@@ -255,7 +267,7 @@ export default function Portfolio ({ activeCategory }: PortfolioProps) {
 									data.orientation === 'portrait' ? 'aspect-[9/16]' : 'aspect-[16/9]',
 								].join(' ')}
 							>
-								<PortfolioVideoPlayer 
+								<PortfolioVideoPlayer
 									videoUrl={resolveReelUrl(video.url)}
 									className="w-full h-full"
 									orientation={data.orientation}
@@ -270,4 +282,3 @@ export default function Portfolio ({ activeCategory }: PortfolioProps) {
 		</section>
 	)
 }
- 
