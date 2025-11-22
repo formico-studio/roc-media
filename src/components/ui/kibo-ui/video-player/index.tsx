@@ -218,7 +218,7 @@ export const VideoPlayerClickOverlay = ({
   };
 
   return (
-    <div 
+    <div
       ref={overlayRef}
       className={cn(
         'absolute inset-0 z-5 cursor-pointer',
@@ -278,7 +278,7 @@ export const VideoPlayerCallToAction = ({
   }
 
   return (
-    <div 
+    <div
       ref={ctaRef}
       className={cn(
         'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10',

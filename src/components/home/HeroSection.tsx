@@ -82,11 +82,11 @@ export default function HeroSection() {
 					<div className="mt-6 md:mt-8">
 						<div className="w-full max-w-3xl mx-auto">
 							{/* Video Container with Border */}
-							<div className="relative w-full aspect-[16/9] border-4 border-white overflow-hidden">
+							<div className="relative w-full border-4 border-white overflow-hidden">
 								{/* Video Player with transparent overlay controls */}
-								<VideoPlayer className="w-full h-full relative">
+								<VideoPlayer className="w-full relative block">
 									<VideoPlayerContent
-										className="w-full h-full object-cover"
+										className="w-full h-auto block"
 										preload="auto"
 										playsInline
 										autoPlay
