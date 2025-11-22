@@ -1,39 +1,39 @@
 import {
-	Clapperboard,
-	Target,
-	Scissors,
-	MonitorPlay,
-	Share2
-} from 'lucide-react'
+	FaClapperboard,
+	FaBullseye,
+	FaScissors,
+	FaDesktop,
+	FaShareNodes
+} from 'react-icons/fa6'
 
 const expertiseItems = [
 	{
 		title: "Content Creation",
-		icon: Clapperboard,
+		icon: FaClapperboard,
 		items: ["Story-Driven Scripting", "Professional Recording", "Seamless Post-Production"],
 		className: "lg:col-span-1"
 	},
 	{
 		title: "Content Strategy",
-		icon: Target,
+		icon: FaBullseye,
 		items: ["Market-Informed Planning", "Thematic Blueprint & Budgeting", "Actionable Growth Roadmap"],
 		className: "lg:col-span-1"
 	},
 	{
 		title: "Video Editing",
-		icon: Scissors,
+		icon: FaScissors,
 		items: ["Professional Editing", "Masterful Pacing & Flow", "Color Grading & Sound Design"],
 		className: "lg:col-span-1"
 	},
 	{
 		title: "Motion Graphics",
-		icon: MonitorPlay,
+		icon: FaDesktop,
 		items: ["Visually Engaging 2D Animation", "Clear SaaS & Explainer Videos", "Impactful Kinetic Typography"],
 		className: "lg:col-span-1 lg:col-start-1 lg:translate-x-1/2"
 	},
 	{
 		title: "Social Media Management",
-		icon: Share2,
+		icon: FaShareNodes,
 		items: ["Platform-Specific Content Research", "Strategic Content Calendar", "High-Volume Content Production"],
 		className: "lg:col-span-1 lg:col-start-2 lg:translate-x-1/2"
 	}

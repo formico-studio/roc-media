@@ -46,12 +46,12 @@ const categories = {
 		title: 'Motion Graphics Videos',
 		orientation: 'landscape',
 		videos: [
-			{ title: 'Motion Graphic 1', url: '@reels/motion/vid1.mp4', thumbnail: undefined },
-			{ title: 'Motion Graphic 2', url: '@reels/motion/vid2.mp4', thumbnail: undefined },
-			{ title: 'Motion Graphic 3', url: '@reels/motion/vid3.mp4', thumbnail: undefined },
-			{ title: 'Motion Graphic 4', url: '@reels/motion/vid4.mp4', thumbnail: undefined },
-			{ title: 'Motion Graphic 5', url: '@reels/motion/vid5.mp4', thumbnail: undefined },
-			{ title: 'Motion Graphic 6', url: '@reels/motion/vid6.mp4', thumbnail: undefined },
+			{ title: 'Motion Graphic 1', url: '@reels/motion/vid1.mp4', thumbnail: '@reels/motion/1.png' },
+			{ title: 'Motion Graphic 2', url: '@reels/motion/vid2.mp4', thumbnail: '@reels/motion/2.png' },
+			{ title: 'Motion Graphic 3', url: '@reels/motion/vid3.mp4', thumbnail: '@reels/motion/3.png' },
+			{ title: 'Motion Graphic 4', url: '@reels/motion/vid4.mp4', thumbnail: '@reels/motion/4.png' },
+			{ title: 'Motion Graphic 5', url: '@reels/motion/vid5.mp4', thumbnail: '@reels/motion/5.png' },
+			{ title: 'Motion Graphic 6', url: '@reels/motion/vid6.mp4', thumbnail: '@reels/motion/6.png' },
 		],
 	},
 } as const

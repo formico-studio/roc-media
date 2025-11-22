@@ -39,7 +39,7 @@ export default function HeroSection() {
 						<div className="flex items-center select-none mb-10">
 							<img src="/roc.webp" alt="ROC" className="h-8 w-auto object-contain" />
 						</div>
-						
+
 						{/* Navigation buttons with more space and professional styling */}
 						<nav className="flex items-center justify-center space-x-8 text-base font-neue-montreal">
 							<Link to='/' className="cursor-pointer hover:opacity-80 px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-300 font-medium">
@@ -95,20 +95,20 @@ export default function HeroSection() {
 										slot="media"
 										src="/vsl.mp4"
 									/>
-									
+
 									{/* Clickable overlay for mobile play/pause */}
 									<VideoPlayerClickOverlay />
-									
+
 									{/* Centered Play Button (CSS-hidden while playing) */}
 									<VideoPlayerPlayButton
 										title=""
 										className="centered-play-btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-16 h-16 rounded-full bg-black/70 hover:bg-black/80 text-white flex items-center justify-center shadow-lg ring-2 ring-white/70 pointer-events-auto transition"
 										style={{ ['--media-button-icon-width']: '32px', ['--media-button-icon-height']: '32px', ['--media-control-display']: 'block', ['--media-icon-color']: '#ffffff' } as any}
 									/>
-									
+
 									{/* Built-in Mute Button (top-right circle) */}
 									<VideoPlayerMuteButton />
-									
+
 									{/* Timeline at bottom border */}
 									<VideoPlayerTimeRange />
 								</VideoPlayer>
@@ -117,8 +117,8 @@ export default function HeroSection() {
 					</div>
 
 					<div className="mt-6 md:mt-8 flex flex-col items-center justify-center space-y-4">
-						<ShinyButton 
-							onClick={() => (window.location.href = 'tel:+917428718464')}
+						<ShinyButton
+							onClick={() => window.open('https://forms.gle/kdhx6T4DFVSu1mvL9', '_blank')}
 							className="bg-secondary text-primary font-neue-montreal font-bold rounded-full px-12 md:px-16 py-5 md:py-6 text-lg md:text-xl border-0 shadow-lg"
 							shineColor="#ffffff"
 							overlayShineColor="#ffffff"
