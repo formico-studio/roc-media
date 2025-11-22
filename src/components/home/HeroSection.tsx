@@ -12,7 +12,7 @@ import ShinyButton from '@/components/ui/shiny-button'
 
 export default function HeroSection() {
 	const navigate = useNavigate()
-
+	// 
 	return (
 		<section className="bg-primary text-white flex flex-col pb-16 md:pb-20 md:min-h-screen">
 			<header className="w-full">
